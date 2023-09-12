@@ -15,7 +15,6 @@
 
 
 #include "account.h"
-
 #include<iostream>
 
     // Default constructor.
