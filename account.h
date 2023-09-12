@@ -62,7 +62,7 @@ public:
     // Destructor.
     // Display a message indicating the account is being destroyed.
     ~Account(){
-        std::cout << "Account with balance " << balance << " is being destoryed." << std::endl;
+        std::cout << "Account with balance " << balance << " is being destroyed." << std::endl;
     };
 };
 
