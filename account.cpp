@@ -12,47 +12,42 @@
 //    d. Function 'withdraw' that takes an amount and subtracts it from the balance.
 // 4. A destructor that displays a message like "Account with balance <balance_value> is being destroyed."
 
-#ifndef ACCOUNT_H
-#define ACCOUNT_H
+
+
+#include "account.h"
 
 #include<iostream>
 
-class Account {
-private:
-    // Private member variable to store the balance.
-    double balance;
-
-public:
     // Default constructor.
     // Initialize 'balance' to 0.
-    Account(){
+Account::Account(){
         balance = 0;
     };
 
     // Parameterized constructor.
     // Initialize 'balance' with the provided 'initialBalance'.
-    Account(double initialBalance){
+Account::Account(double initialBalance){
         balance = initialBalance;
     };
 
 
     // Getter function to return the current balance.
-    double getBalance(){
+double Account::getBalance(){
         return balance;
     }
 
     // Setter function to set the balance to a new value.
-    void setBalance(double newBalance){
+void Account::setBalance(double newBalance){
         balance = newBalance;
     };
 
     // Function to deposit an amount into the account.
-    void deposit(double amount){
+void Account::deposit(double amount){
         balance = balance + amount;
     };
 
     // Function to withdraw an amount from the account.
-    void withdraw(double amount){
+void Account::withdraw(double amount){
         if(balance > amount){
             balance = balance - amount;
         }
@@ -63,9 +58,9 @@ public:
 
     // Destructor.
     // Display a message indicating the account is being destroyed.
-    ~Account(){
+Account::~Account(){
         std::cout << "Account with balance " << balance << " is being destoryed." << std::endl;
     };
-};
 
-#endif // ACCOUNT_H
+
+
